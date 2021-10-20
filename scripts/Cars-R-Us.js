@@ -1,5 +1,6 @@
+import { cars } from "./Cars.js"
 import { colors } from "./Colors.js"
-import { addCustomOrder, getOrders } from "./database.js"
+import { addCustomOrder } from "./database.js"
 import { interiors } from "./Interiors.js"
 import { Orders } from "./Orders.js"
 import { technologies } from "./Technologies.js"
@@ -36,6 +37,11 @@ export const CarsRUs = () => {
             <section class="choices__wheels options">
                 <h2>Wheels</h2>
                 ${wheels()}
+            </section>
+        </article>
+            <section class="choices__carType options">
+                <h2>Style of Car</h2>
+                ${cars()}
             </section>
         </article>
 

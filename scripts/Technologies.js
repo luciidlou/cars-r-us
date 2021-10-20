@@ -15,7 +15,7 @@ const technologiesArr = getTechnologies()
 export const technologies = () => {
     let html = `
         <select id="technologies">
-        <option value="0">Please choose a color...</option>
+        <option value="0">Please choose a technology package...</option>
         `
     for (const technology of technologiesArr) {
         html += `<option value="${technology.id}">${technology.package}</option>`

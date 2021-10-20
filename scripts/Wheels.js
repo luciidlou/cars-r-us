@@ -15,7 +15,7 @@ const wheelsArr = getWheels()
 export const wheels = () => {
     let html = `
         <select id="wheels">
-        <option value="0">Please choose a color...</option>
+        <option value="0">Please choose a set of wheels...</option>
         `
     for (const wheel of wheelsArr) {
         html += `<option value="${wheel.id}">${wheel.type}</option>`
