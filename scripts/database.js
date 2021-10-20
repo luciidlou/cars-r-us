@@ -87,13 +87,31 @@ const database = {
             price: 802.91
         }
     ],
+    cars:[
+        {
+            id: 1,
+            type: "Car",
+            price: 1
+        },
+        {
+            id: 2,
+            type: "SUV",
+            price: 1.5
+        },
+        {
+            id: 3,
+            type: "Truck",
+            price: 2.25
+        }
+    ],
     customOrders: [
         {
             id: 1,
             colorId: 3,
             interiorId: 2,
-            technologyId: 3,
+            technologyId: 2,
             wheelId: 1,
+            carId: 1,
             timestamp: 1614659931693
         }
     ],
@@ -117,7 +135,9 @@ export const getTechnologies = () => {
 export const getWheels = () => {
     return database.wheels.map(wheel => ({...wheel}))
 }
-
+export const getCars = () => {
+    return database.cars.map(car => ({...car}))
+}
 export const getOrders = () => {
     return database.customOrders.map(order => ({...order}))
 }
@@ -134,6 +154,9 @@ export const setTechnology = (id) => {
 export const setWheel = (id) => {
     database.orderBuilder.wheelId = id
 }
+export const setCar = (id) => {
+    database.orderBuilder.carId = id
+}
 
 
 export const addCustomOrder = () => {
@@ -141,7 +164,7 @@ export const addCustomOrder = () => {
     const newOrder = {...database.orderBuilder}
 
     // Add a new primary key to the object
-    if (!database.customOrders.id) {
+    if (database.customOrders.length === 0) {
         newOrder.id = 1
     } else {
         const lastIndex = database.customOrders.length - 1

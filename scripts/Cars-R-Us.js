@@ -1,3 +1,4 @@
+import { cars } from "./Cars.js"
 import { colors } from "./Colors.js"
 import { addCustomOrder } from "./database.js"
 import { interiors } from "./Interiors.js"
@@ -38,13 +39,18 @@ export const CarsRUs = () => {
                 ${wheels()}
             </section>
         </article>
+            <section class="choices__carType options">
+                <h2>Style of Car</h2>
+                ${cars()}
+            </section>
+        </article>
 
         <article>
             <button id="orderButton">Place Custom Order</button>
         </article>
 
         <article class="customOrders">
-            <h2>Custom Car Orders</h2>
+            <h2 class="orders-title">Custom Car Orders</h2>
             ${Orders()}         
         </article>
     `

@@ -15,7 +15,7 @@ const interiorsArr = getInteriors()
 export const interiors = () => {
     let html = `
         <select id="interiors">
-        <option value="0">Please choose a color...</option>
+        <option value="0">Please choose an interior...</option>
         `
     for (const interior of interiorsArr) {
         html += `<option value="${interior.id}">${interior.type}</option>`
