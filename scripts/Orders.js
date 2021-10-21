@@ -51,11 +51,11 @@ export const Orders = () => {
         Can you explain why the state variable has to be inside
         the component function for Orders, but not the others?
     */
-    const orders = getOrders()
+    const ordersArr = getOrders()
 
     let html = "<ul>"
 
-    const listItems = orders.map(buildOrderListItem)
+    const listItems = ordersArr.map(buildOrderListItem)
 
     html += listItems.join("")
     html += "</ul>"
