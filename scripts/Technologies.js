@@ -1,4 +1,4 @@
-import { getTechnologies, setTechnology } from "./database.js";
+import { getTechnologies, setTechnology } from "./dataAccess.js"
 
 document.addEventListener(
     "change",

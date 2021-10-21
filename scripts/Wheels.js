@@ -1,4 +1,4 @@
-import { getWheels, setWheel } from "./database.js";
+import { getWheels, setWheel } from "./dataAccess.js"
 
 document.addEventListener(
     "change",

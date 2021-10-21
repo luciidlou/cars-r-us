@@ -1,4 +1,4 @@
-import { getColors, setColor } from "./database.js";
+import { getColors, setColor } from "./dataAccess.js"
 
 
 document.addEventListener(
